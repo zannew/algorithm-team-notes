@@ -1,5 +1,5 @@
 a = [1, 4, 3]
-print("basic list : ", a)
+print("basic type_list : ", a)
 
 # appends an element
 a.append(2)

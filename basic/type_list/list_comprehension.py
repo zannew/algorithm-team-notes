@@ -23,7 +23,7 @@ print(array)
 n = 3
 m = 4
 
-# 1. list comprehension
+# 1. type_list comprehension
 arrays = [[0] * m for _ in range(n)]
 print(arrays)
 
