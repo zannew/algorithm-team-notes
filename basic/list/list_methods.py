@@ -32,7 +32,7 @@ a.remove(3)
 print("removed : ", a)
 
 # removes the all of matching elements
-remove_set = [3, 7]
+remove_set = {3, 7}
 
 # Result has values not in "remove_set"
 result = [i for i in a if i not in remove_set]
