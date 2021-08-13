@@ -23,7 +23,7 @@ count = int(m / (k + 1)) * k
 count += m % (k + 1)
 
 result += count * first
-result += (m - count) * second
+result += (m - count) * second # second가 더해질 횟수 = m - count
 
 
 print(result)

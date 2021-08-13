@@ -15,10 +15,10 @@ count = 0
 for _ in range(m):
     count += 1
     if count > k:
-        result += data[-2]
+        result += data[-2] # count가 k와 같아지면 두번째로 큰 수를 더하고 count를 초기화한다.
         count = 0
     else:
-        result += data[-1]
+        result += data[-1] # count가 채워지지 않은 상태이면 가장 큰 수를 계속 더한다.
 
 print(result)
 
