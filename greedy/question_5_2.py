@@ -4,21 +4,27 @@
 더해질 수 없는 것이 이 법칙의 특징이다.
 단, 서로 다른 인덱스에 해당하는 수가 같은 경우에도 서로 다른 수라고 간주한다.
 첫째줄에 배열의 크기 N, 숫자가 더해지는 횟수 M, 그리고 K가 주어지고 둘째줄에 배열의 숫자가 입력될 때 이 큰 수의 법칙에 다른 결과를 출력하시오.
+
+* 5_2에서는 반복되는 수열에 대해 파악하는 것이 핵심!
+
 '''
 n, m, k = map(int, input().split())
 data = list(map(int, input().split()))
 data.sort()
 
 result = 0
-count = 0
+count = 0 # 최종적으로 first가 더해질 횟수
 
-for _ in range(m):
-    count += 1
-    if count > k:
-        result += data[-2]
-        count = 0
-    else:
-        result += data[-1]
+first = data[n - 1]
+second = data[n - 2]
+
+# first가 더해질 횟수를 구한다.
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
+
+result += count * first
+result += (m - count) * second
+
 
 print(result)
 
