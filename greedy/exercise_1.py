@@ -30,4 +30,4 @@ elif n % 5 == 2:
 print(result)
 
 terminate_time = timeit.default_timer()
-print("%f초 걸렸습니다." % (terminate_time - start_time))
+print("%f초 걸림" % (terminate_time - start_time))
