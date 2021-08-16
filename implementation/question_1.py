@@ -14,15 +14,22 @@ dx = [0, -1, 0, 1]
 dy = [1, 0, -1, 0]
 
 n = int(input())
+# 시작 좌표
 x, y = 1, 1
 plans = list(map(str, input().split()))
+# 우 상 좌 하 -> 방향 타입 리스트 생성
 move_types = ['R','U','L','D']
 
+# 입력받은 계획서로 반복문을 만든다.
 for plan in plans:
+    # 방향 타입을 체크하는 반복문을 만든다.
     for i in range(len(move_types)):
+        # 입력받은 계획서대로 순서대로 방향 타입과 맞는지 비교한다.
         if plan == move_types[i]:
+            # 입력받은 계획에 해당하는 값과 타입이 같으면 미리 만들어둔 이동값 리스트의 인덱스 값만큼 x, y 좌표를 이동해준다.
             nx = x + dx[i]
             ny = y + dy[i]
+    # 이동한 값이 1보다 작거나 주어진 값보다 커져버린 경우에는 continue로 실제 x,y의 값에 저장하지 않고 지나친다.
     if nx < 1 or nx > n or ny < 1 or ny > n:
         continue
     x, y = nx, ny
