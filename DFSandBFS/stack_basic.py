@@ -1,5 +1,6 @@
 '''
 스택 자료구조 구현 (Last In First Out)
+
 '''
 
 list = []

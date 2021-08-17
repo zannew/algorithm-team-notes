@@ -1,7 +1,7 @@
 '''
 큐 자료구조 구현 (First In First Out)
+: 시간 복잡도가 더 높고 비효율적으로 동작할 수 있으므로 deque 라이브러리 사용 권장
 '''
-# 시간 복잡도가 더 높고 비효율적으로 동작할 수 있으므로 deque 라이브러리 사용 권장
 from collections import deque
 
 queue = deque()
